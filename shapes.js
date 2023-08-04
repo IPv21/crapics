@@ -10,7 +10,7 @@ class Shape {
 
 class Circle extends Shape {
     render() {
-        return '<circle cx=160 cy=100 r=80 style="fille:${this.color}"/>'; 
+        return '<circle cx=160 cy=100 r=80 style="fill:${this.color}"/>'; 
     }
 }
 
@@ -26,7 +26,7 @@ class Square extends Shape {
     }
 }
 
-module.exporns = {
+module.exports = {
     Shape,
     Circle,
     Triangle,

@@ -2,8 +2,14 @@
     "name": "crapics",
     "version": "1.0.0",
     "description": "svg renderer",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
     "dependencies": {
-      "inquirer": "8.2.4"
+        "inquirer": "8.2.4"
+    },
+    "devDependencies": {
+        "jest": "^28.1.3"
     }
-  }
-  
+}
