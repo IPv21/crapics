@@ -1,0 +1,9 @@
+{
+    "name": "crapics",
+    "version": "1.0.0",
+    "description": "svg renderer",
+    "dependencies": {
+      "inquirer": "8.2.4"
+    }
+  }
+  
