@@ -45,32 +45,37 @@ const questions = [
 function init() {
     inquirer.prompt(questions).then((answers) => {
         const { title, color, shape, background } = answers;
-        // const shapeObj = 'newShape';
-        let svgElement = '';
-        // console.log(title);
-        // console.log(shape);
-        // console.log(color);
-        // console.log(background);
+
         if (shape === 'Circle') {
             const circle = new Circle();
             circle.setColor(background);
             circle.setText(title);
             circle.setTextColor(color);
-            console.log(circle);
-            // console.log(circle.render());
+            console.log(circle);   // Log the circle element
             console.log(circle.renderSvg());
             write('logo.svg', circle.renderSvg());
-           
-
-
-
-
-        
-
+        } else if (shape === 'Square') {  // Use 'else if' here instead of 'if'.
+            const square = new Square();  // Correct variable name 'square'.
+            square.setColor(background);
+            square.setText(title);
+            square.setTextColor(color);
+            console.log(square);  // Log the 'square' object.
+            console.log(square.renderSvg());
+            write('logo.svg', square.renderSvg());
+        }  else if (shape === 'Triangle') {  
+            const triangle = new Triangle();  // Correct variable name 'square'.
+            triangle.setColor(background);
+            triangle.setText(title);
+            triangle.setTextColor(color);
+            console.log(triangle);  // Log the 'triangle' object.
+            console.log(triangle.renderSvg());
+            write('logo.svg', triangle.renderSvg());
         }
-    })
+    });
+}
+    
 
-};
+    
 
 function write(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
