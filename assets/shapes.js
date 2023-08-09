@@ -33,7 +33,7 @@ class Circle extends Shape {
         ${this.render()}
 
       
-        <text x="150" y="125" font-size="60" text-anchor="middle" style="fill:${this.textColor}>${this.text}"</text>
+        <text x="150" y="125" font-size="60" text-anchor="middle" style="fill:${this.textColor}">${this.text}</text>
       
       </svg>`
     }
@@ -41,14 +41,14 @@ class Circle extends Shape {
 
 class Triangle extends Shape {
     render() {
-        return `<polygon points="150,50 50,150 250,150" style="fill:${this.color}"/>`;
+        return `<polygon points="180,50 50,150 250,150" style="fill:${this.color}"/>`;
     }
     renderSvg() {
-        return `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">
+        return `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="250">
         ${this.render()}
 
       
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill=${this.textColor}>${this.text}</text>
+        <text x="150" y="125" font-size="60" text-anchor="middle" style="fill:${this.textColor}">${this.text}</text>
       
       </svg>`
     }
@@ -63,7 +63,7 @@ class Square extends Shape {
         ${this.render()}
 
       
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill=${this.textColor}>${this.text}</text>
+        <text x="150" y="125" font-size="60" text-anchor="middle" style="fill:${this.textColor}">${this.text}</text>
       
       </svg>`
     }
