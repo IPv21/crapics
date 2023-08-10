@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
-const {Shape, Triangle, Circle, Square} = require('./shapes');
+const {Shape, Triangle, Circle, Square} = require('./lib/shapes');
 
 class Svg {
     constructor() {
