@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const path = require('path');
 const {Shape, Triangle, Circle, Square} = require('./lib/shapes');
 
+// combines the text and shape for final product
 class Svg {
     constructor() {
         this.textElement = ''
@@ -12,7 +13,7 @@ class Svg {
         
     }
 }
-
+// question
 const questions = [
 
     {
@@ -45,7 +46,7 @@ const questions = [
 function init() {
     inquirer.prompt(questions).then((answers) => {
         const { title, color, shape, background } = answers;
-
+// generation of shapes
         if (shape === 'Circle') {
             const circle = new Circle();
             circle.setColor(background);
@@ -76,7 +77,7 @@ function init() {
     
 
     
-
+// process.cwd() writes to current directory
 function write(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 
@@ -85,5 +86,5 @@ function write(fileName, data) {
 };
 
 
-
+// let's begin!
 init();
